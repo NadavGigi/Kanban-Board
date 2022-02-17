@@ -1,0 +1,33 @@
+﻿<Window x:Class="Presentation.View.BoardControllerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation.View"
+        mc:Ignorable="d"
+        Title="BoardControllerView" Height="462" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="0,72,282,30">
+            <ListBox MouseDoubleClick="BoardList_DoubleClick" ItemsSource="{Binding Path=User.Boards}" SelectedItem="{Binding Path=SelectedBoard, Mode=TwoWay}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#FF003CFF" BorderThickness="1">
+                            <StackPanel Orientation="Vertical" >
+                                <Label Content="{Binding Path=BoardName, Mode=TwoWay}" BorderBrush="{x:Null}"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <Label Content="{Binding Path=Message, Mode=OneWay}" Foreground="Red" HorizontalAlignment="Center" Margin="0,400,0,0" VerticalAlignment="Top" Width="259" Height="30"/>
+        <Button x:Name="Remove_Board" Content="Remove_Board" HorizontalAlignment="Right" Height="30" Margin="0,80,30,0" VerticalAlignment="Top" Width="100" Click="Remove_Board_Click" IsEnabled="{Binding Path=EnableForward,Mode=OneWay}"></Button>
+        <Button x:Name="Logout" Content="Logout" HorizontalAlignment="Right" Height="30" Margin="0,0,30,30" VerticalAlignment="Bottom" Width="100" Click="Logout_Click"/>
+
+        <Button x:Name="Add_Board" Content="Add_Board" HorizontalAlignment="Right" Height="30" Margin="0,30,30,0" VerticalAlignment="Top" Width="100" Click="Add_Board_Click"/>
+        <Label Content="All of your Boards" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" Height="37" Width="113"/>
+        <Button x:Name="Join_Board" Content="Join_Board" HorizontalAlignment="Right" Height="30" Margin="0,130,30,0" VerticalAlignment="Top" Width="100" Click="JoinBoard_Click"/>
+
+        <Label Content="{Binding Path=Title, Mode=OneTime}" HorizontalAlignment="Center" Margin="0,0,0,386" Width="330"/>
+    </Grid>
+</Window>

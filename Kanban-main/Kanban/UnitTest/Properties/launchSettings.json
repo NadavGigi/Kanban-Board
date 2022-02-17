@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UnitTest": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\User\\OneDrive\\שולחן העבודה\\לימודים\\סמסטר ב\\מבוא להנדסת תוכנה\\Milestone1\\assignment1\\milestone1-rnb\\UnitTest\\bin\\Debug\\net5.0"
+    }
+  }
+}

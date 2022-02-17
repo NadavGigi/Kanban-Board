@@ -1,0 +1,19 @@
+﻿<Window x:Class="Presentation.View.JoinBoardView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation.View"
+        mc:Ignorable="d"
+        Title="JoinBoardView" Height="247" Width="390">
+    <Grid Margin="0,0,10,3">
+        <Label Content="Board_Name" HorizontalAlignment="Center" Margin="0,80,200,0" VerticalAlignment="Top"/>
+        <TextBox Text ="{Binding Path=BoardName, Mode=TwoWay}" HorizontalAlignment="Center" Height="23" Margin="0,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Creator Email" HorizontalAlignment="Center" Margin="0,30,200,0" VerticalAlignment="Top"/>
+
+        <TextBox Text ="{Binding Path=CreatorEmail, Mode=TwoWay}" HorizontalAlignment="Center" Height="23" Margin="0,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+        <Button Content="Join Board" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Width="99" Click="JoinBoard_Click"/>
+        <Label Content="{Binding Path=Message, Mode=OneWay}" Foreground="Red" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" Width="99" Height="30"/>
+    </Grid>
+</Window>

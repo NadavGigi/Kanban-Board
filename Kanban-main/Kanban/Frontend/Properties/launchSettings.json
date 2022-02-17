@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Presentation": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\User\\OneDrive\\שולחן העבודה\\לימודים\\סמסטר ב\\מבוא להנדסת תוכנה\\Milestone1\\assignment1\\milestone1-rnb\\Backend\\bin\\Debug\\net5.0",
+      "remoteDebugEnabled": false
+    }
+  }
+}
